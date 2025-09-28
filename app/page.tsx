@@ -79,9 +79,9 @@ export default function Home() {
               <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6">
                 Reconcile Coex output with Grafana data to identify discrepancies and ensure data accuracy.
               </p>
-              <div className="flex items-center text-xs sm:text-sm text-violet-600 font-medium">
-                <span>Ready to use</span>
-                <span className="ml-2">✅</span>
+              <div className="flex items-center text-xs sm:text-sm text-amber-600 font-medium">
+                <span>Coming Soon</span>
+                <span className="ml-2">🚧</span>
               </div>
             </div>
           </Link>

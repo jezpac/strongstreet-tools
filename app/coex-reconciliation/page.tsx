@@ -91,6 +91,17 @@ export default function CoexReconciliationPage() {
 
     setProcessingState('processing');
 
+    // Simulate processing for demo purposes
+    setTimeout(() => {
+      setProcessingState('error');
+      setErrorMessage(
+        'This feature is coming soon! The reconciliation processing is currently in development. ' +
+        'Your files were uploaded successfully, but the backend processing is not yet implemented.'
+      );
+    }, 2000);
+
+    // Commented out actual API call for now
+    /*
     try {
       // Create FormData to send both files
       const formData = new FormData();
@@ -130,6 +141,7 @@ export default function CoexReconciliationPage() {
           : 'Failed to process reconciliation. Please try again.'
       );
     }
+    */
   };
 
   const resetForm = () => {
@@ -205,6 +217,27 @@ export default function CoexReconciliationPage() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+      {/* Coming Soon Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-100 to-transparent opacity-50 rounded-full -mr-16 -mt-16"></div>
+        <div className="relative p-4 sm:p-6 text-center">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
+              <span className="text-xl">🚧</span>
+            </div>
+            <h2 className="text-lg sm:text-xl font-bold text-amber-900">Coming Soon</h2>
+          </div>
+          <p className="text-sm sm:text-base text-amber-800 max-w-2xl mx-auto">
+            This tool is currently in development. You can explore the interface and upload files,
+            but the reconciliation processing is not yet implemented. We&apos;re working hard to bring you this feature soon!
+          </p>
+          <div className="mt-4 flex items-center justify-center gap-2 text-xs sm:text-sm text-amber-700">
+            <span>🛠️</span>
+            <span className="font-medium">Interface ready • Backend in progress</span>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="text-center">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center justify-center gap-2 sm:gap-3">
