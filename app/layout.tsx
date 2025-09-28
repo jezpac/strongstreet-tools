@@ -7,6 +7,7 @@ import "./globals.css";
 
 const tools = [
   { name: "Manifest Generation", href: "/manifest-generation" },
+  { name: "Social Media Generator", href: "/social-media-generator" },
   { name: "Coex Reconciliation", href: "/coex-reconciliation" },
 ];
 
