@@ -153,7 +153,7 @@ export default function CoexReconciliationPage() {
     description: string;
   }) => (
     <div
-      className={`relative border-2 border-dashed rounded-xl p-6 text-center transition-all duration-200 cursor-pointer ${
+      className={`relative border-2 border-dashed rounded-xl p-4 sm:p-6 text-center transition-all duration-200 cursor-pointer ${
         isDragOver === type
           ? 'border-blue-400 bg-blue-50'
           : file
@@ -204,22 +204,22 @@ export default function CoexReconciliationPage() {
   );
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-slate-900 flex items-center justify-center gap-3">
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center justify-center gap-2 sm:gap-3">
           📊 Coex Reconciliation
         </h1>
-        <p className="mt-2 text-slate-600">Reconcile Coex output with Grafana data</p>
+        <p className="mt-2 text-sm sm:text-base text-slate-600">Reconcile Coex output with Grafana data</p>
       </div>
 
       {/* Step-by-step Instructions */}
       <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl border border-purple-200 overflow-hidden">
-        <div className="p-6">
-          <h2 className="text-xl font-semibold text-purple-900 mb-4 flex items-center gap-2">
+        <div className="p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-purple-900 mb-3 sm:mb-4 flex items-center gap-2">
             📝 How it works
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="flex items-start gap-3">
               <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
                 1
@@ -259,14 +259,14 @@ export default function CoexReconciliationPage() {
 
       {/* File Upload Section */}
       <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
-        <div className="p-6">
-          <h2 className="text-xl font-semibold text-slate-900 mb-6 flex items-center gap-2">
+        <div className="p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2">
             📁 Upload Files for Reconciliation
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* File Upload Areas */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
                   Step 1: Coex Output File

@@ -127,22 +127,22 @@ export default function ManifestGenerationPage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-slate-900 flex items-center justify-center gap-3">
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center justify-center gap-2 sm:gap-3">
           📋 Manifest Generation
         </h1>
-        <p className="mt-2 text-slate-600">Generate delivery manifests from customer lists</p>
+        <p className="mt-2 text-sm sm:text-base text-slate-600">Generate delivery manifests from customer lists</p>
       </div>
 
       {/* Step-by-step Instructions */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 overflow-hidden">
-        <div className="p-6">
-          <h2 className="text-xl font-semibold text-blue-900 mb-4 flex items-center gap-2">
+        <div className="p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-blue-900 mb-3 sm:mb-4 flex items-center gap-2">
             📝 How it works
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="flex items-start gap-3">
               <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
                 1
@@ -182,15 +182,15 @@ export default function ManifestGenerationPage() {
 
       {/* File Upload Section */}
       <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
-        <div className="p-6">
-          <h2 className="text-xl font-semibold text-slate-900 mb-4 flex items-center gap-2">
+        <div className="p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-4 flex items-center gap-2">
             📁 Upload Customer List
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Drag & Drop Zone */}
             <div
-              className={`relative border-2 border-dashed rounded-xl p-8 text-center transition-all duration-200 cursor-pointer ${
+              className={`relative border-2 border-dashed rounded-xl p-6 sm:p-8 text-center transition-all duration-200 cursor-pointer ${
                 isDragOver
                   ? 'border-blue-400 bg-blue-50'
                   : file
